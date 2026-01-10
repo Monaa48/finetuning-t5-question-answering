@@ -1,29 +1,36 @@
-# Fine-tuning T5 for Question Answering (SQuAD)
+# finetuning-t5-question-answering
 
-## Overview
-This repository fine-tunes t5-base for generative QA on SQuAD. The model generates answer text given (question, context).
+Fine-tuning **T5-base** (encoder–decoder / Seq2Seq) for **generative Question Answering** on **SQuAD**.
 
-## Dataset
-- rajpurkar/squad (HuggingFace Datasets)
+## Identity
+- Name:
+- Class:
+- NIM:
+- Group:
 
-## Model
-- t5-base
+## Project overview
+This repo contains an end-to-end pipeline:
+1. Load SQuAD dataset
+2. Convert QA examples into Seq2Seq format for T5 (`question: ... context: ...` → `answer`)
+3. Fine-tune T5-base
+4. Evaluate with SQuAD metrics (Exact Match & F1)
+5. Save metrics + sample predictions to `reports/`
 
-## Repository Structure
-- notebooks/
-- reports/
-- requirements.txt
+## Repository structure
+- `notebooks/` : experiments and explanations
+- `reports/` : final metrics and qualitative examples (tables/JSON)
+- `requirements.txt` : dependencies
 
-## Notebooks
-1. notebooks/01_prepare_squad.ipynb
-2. notebooks/02_finetune_t5.ipynb
-3. notebooks/03_evaluate_squad_metrics.ipynb
+## How to run
+1. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+2. Open notebook:
+   - `notebooks/01_t5_squad_qa.ipynb`
 
-## Results (fill after running)
-| Model | Epochs | Exact Match | F1 |
-|------|--------|-------------|----|
-| t5-base |  |  |  |
-
-## Identification
-- ANOM NUR MAULID - 1103223193 - TK4601
-- DARRELL CHESTA ADABI - 1103223128 - TK4601
+## Results
+Fill in after training:
+- Exact Match (EM):
+- F1:
+- Notes / error analysis:
